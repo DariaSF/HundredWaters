@@ -3,23 +3,87 @@
 <head>
   <title>Hundred Waters</title>
   <link rel="stylesheet" type="text/css" href="assets/stylesheets/styles.css" />
+  <link rel="stylesheet" type="text/css" href="assets/stylesheets/lightbox.min.css" />
+  <style type="text/css">
+    .header {
+      background-color: #222;
+    }
+    .img-thumbnail {
+      width: 22%;
+      padding: 8pt;
+    }
+    .content {
+      background-color: #fff;
+    }
+    .row {
+      background-color: #000;
+      padding: 8pt;
+    }
+    .videoRow {
+      color: #000;
+      position: relative;
+      background-color: #fff;
+      width: 704px;
+      left: 50%;
+      margin-left: -350px;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <div class="header headerAbout">
+    <div class="header">
       <div class="logo">
         <a href="index.html"><img src="./assets/images/logo.png" alt="Hundred Waters text logo" /></a>
       </div>
       <div class="menu">
         <a href="about.html">ABOUT</a>
         <a href="discography.html">DISCOGRAPHY</a>
-        <a href="media.html" class="current">MEDIA</a>
+        <a class="current" href="media.html">MEDIA</a>
         <a href="merch.html">MERCH</a>
         <a href="tourdates.html">TOUR DATES</a>
       </div>
     </div>
     <div class="content">
+      <div class="row">
+        <div>PHOTOS:</div>
+        <a href = "./assets/images/46-og.jpg" data-lightbox="photo">
+          <img class="img-thumbnail" src="./assets/images/46-og.jpg" alt="group photo"/>
+        </a>
+        <a href = "./assets/images/sing.jpg" data-lightbox="photo">
+          <img class="img-thumbnail" src="./assets/images/sing.jpg" alt="group photo"/>
+        </a>
+        <a href = "./assets/images/field.jpg" data-lightbox="photo">
+          <img class="img-thumbnail" src="./assets/images/field.jpg" alt="group photo"/>
+        </a>
+        <a href = "./assets/images/umbrella.jpg" data-lightbox="photo">
+          <img class="img-thumbnail" src="./assets/images/umbrella.png" alt="group photo"/>
+        </a>
+      </div>
+      <div class="row">
+        <a href = "./assets/images/look.jpg" data-lightbox="photo">
+          <img class="img-thumbnail" src="./assets/images/look.jpg" alt="group photo"/>
+        </a>
+        <a href = "./assets/images/floor.jpg" data-lightbox="photo">
+          <img class="img-thumbnail" src="./assets/images/floor.png" alt="group photo"/>
+        </a>
+        <a href = "./assets/images/sing3.jpg" data-lightbox="photo">
+          <img class="img-thumbnail" src="./assets/images/sing3.jpg" alt="group photo"/>
+        </a>
+        <a href = "./assets/images/fingers.jpg" data-lightbox="photo">
+          <img class="img-thumbnail" src="./assets/images/fingers.jpg" alt="group photo"/>
+        </a>
+      </div>
+      <div class="row videoRow">
+        <div>VIDEOS:</div>
+        <iframe width="350" height="215" src="https://www.youtube.com/embed/vlbKmiBuOog" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="350" height="215" src="https://www.youtube.com/embed/Lo8KqBkjImY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="row videoRow">
+        <iframe width="350" height="215" src="https://www.youtube.com/embed/Lo8KqBkjImY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="350" height="215" src="https://www.youtube.com/embed/vo-8Oa2t4Ro" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
+  <script src="./assets/javascripts/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>

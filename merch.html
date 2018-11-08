@@ -3,10 +3,54 @@
 <head>
   <title>Hundred Waters</title>
   <link rel="stylesheet" type="text/css" href="assets/stylesheets/styles.css" />
+  <style type="text/css">
+    body {
+      background-color: #fff;
+    }
+    img {
+      width: 200pt;
+    }
+    .header {
+      background-color: #000;
+    }
+    .content {
+      background-color: #fff;
+    }
+    .filters {
+      position: relative;
+      width: 445pt;
+      list-style: none;
+      left: 50%;
+      margin-left: -222pt;
+      color: #000;
+    }
+    .filtr-item {
+      display: inline-block;
+      width: 200pt;
+    }
+    .btn {
+      display: inline-block;
+      border: 1pt solid #000;
+      width: 100pt;
+      text-align: center;
+      margin: 0pt;
+      padding-top: 12pt;
+      padding-bottom: 12pt;
+    }
+    .active {
+      background-color: rgba(255, 0, 0, 0.2);
+    }
+    .filtr-container {
+      margin-top: 32pt;
+    }
+    .out-of-stock {
+      cursor: no-drop;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <div class="header headerAbout">
+    <div class="header">
       <div class="logo">
         <a href="index.html"><img src="./assets/images/logo.png" alt="Hundred Waters text logo" /></a>
       </div>
@@ -14,12 +58,72 @@
         <a href="about.html">ABOUT</a>
         <a href="discography.html">DISCOGRAPHY</a>
         <a href="media.html">MEDIA</a>
-        <a href="merch.html" class="current">MERCH</a>
+        <a class="current" href="merch.html">MERCH</a>
         <a href="tourdates.html">TOUR DATES</a>
       </div>
     </div>
     <div class="content">
+      <div class="filters">
+          <ul>
+            <li class="btn active" data-filter="all">
+              ALL ITEMS
+            </li>
+            <li class="btn" data-filter="tshirts">
+              T-SHIRTS
+            </li>
+            <li class="btn" data-filter="sweatshirts">
+              SWEATSHIRTS
+            </li>
+            <li class="btn" data-filter="vinyl">
+              VINYL
+            </li>
+        </ul>
+      </div>
+      <div class="filtr-container">
+        <div class="filtr-item out-of-stock" data-category="all, tshirts" data-sort="value">
+          <img src="./assets/images/shirt.jpg" alt="sample">
+        </div>
+        <div class="filtr-item out-of-stock" data-category="all, sweatshirts" data-sort="value">
+          <img src="./assets/images/sweatshirt.jpg" alt="sample">
+        </div>
+        <div class="filtr-item out-of-stock" data-category="all, tshirts" data-sort="value">
+          <img src="./assets/images/t-shirt_innoc.jpg" alt="sample">
+        </div>
+        <div class="filtr-item out-of-stock" data-category="all, tshirts" data-sort="value">
+          <img src="./assets/images/t-shirtblack.jpg" alt="sample">
+        </div>
+        <div class="filtr-item out-of-stock" data-category="all, tshirts" data-sort="value">
+          <img src="./assets/images/t-shirtblack2.jpg" alt="sample">
+        </div>
+        <div class="filtr-item out-of-stock" data-category="all, tshirts" data-sort="value">
+          <img src="./assets/images/t-shirtblack3.jpg" alt="sample">
+        </div>
+        <div class="filtr-item out-of-stock" data-category="all, tshirts" data-sort="value">
+          <img src="./assets/images/t-shirtgirl.jpg" alt="sample">
+        </div>
+        <div class="filtr-item out-of-stock" data-category="all, vinyl" data-sort="value">
+          <img src="./assets/images/vinblack.PNG" alt="sample">
+        </div>
+        <div class="filtr-item out-of-stock" data-category="all, vinyl" data-sort="value">
+          <img src="./assets/images/vinwhite.png" alt="sample">
+        </div>
+      </div>
     </div>
   </div>
+  <script type="text/javascript" src="./assets/javascripts/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="./assets/javascripts/jquery.filterizr.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.filtr-container').filterizr({});
+      $('.btn').click(function(){
+      if($(this).hasClass('active')){
+        return false;
+      } else {
+        $('.btn').removeClass('active');
+        $(this).addClass('active');
+      }
+    })
+    });
+  </script>
 </body>
 </html>
